@@ -6,11 +6,11 @@ It needs 4 things:
 
 Python
 
-Praw
+Praw (pip install praw)
+
+Youtube-dl (pip install youtube_dl)
 
 Reddit API Key
-
-Youtube-dl
 
 
 Usage:
