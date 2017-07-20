@@ -5,13 +5,18 @@ I created this because there is a ton of good music on some discreet subs (made 
 It needs 4 things:
 
 Python
+
 Praw
+
 Reddit API Key
+
 Youtube-dl
 
 
 Usage:
 
 python music.py subreddit_name
+
 python music.py futurefunk
+
 And without further ado:
