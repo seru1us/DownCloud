@@ -2,6 +2,7 @@ import os
 import praw
 import subprocess
 import sys
+import youtube_dl
 
 reddit = praw.Reddit(client_id='YOUR_CLIENT ID',
                      client_secret='YOUR_SECRET',
@@ -24,8 +25,16 @@ for submission in reddit.subreddit(str(subarg)).search('site:soundcloud.com', li
 
     odirectory = directory.strip() + '/%(title)s.%(ext)s'
 
+    ydl_opts = {
+        'format': 'bestaudio/best',
+        'outtmpl': odirectory,
+
+    }
+
     if not os.path.exists(directory):
         os.makedirs(directory)
-        subprocess.call(['/usr/local/bin/youtube-dl', '-o', odirectory,  dalink])
+        with youtube_dl.YoutubeDL(ydl_opts) as ydl:
+            ydl.download([dalink])
     else:
         print('Artist ' + directory + ' already exists, skipping...')
+
