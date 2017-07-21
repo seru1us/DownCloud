@@ -20,3 +20,6 @@ python music.py subreddit_name
 python music.py futurefunk
 ```
 
+Details:
+
+Searches through a subreddit for artist's SoundCloud links, then downloads all of the music from that artst's profile. First it finds the artist name and creates a directory for the music and dumps it in there. If a directory already exists for that artist, it is skipped.
