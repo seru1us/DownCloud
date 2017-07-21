@@ -28,6 +28,7 @@ for submission in reddit.subreddit(str(subarg)).search('site:soundcloud.com', li
     ydl_opts = {
         'format': 'bestaudio/best',
         'outtmpl': odirectory,
+        'ignoreerrors': True
 
     }
 
